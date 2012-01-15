@@ -167,5 +167,5 @@ void test_tasklist(){
 	local_task=(task_t*)task_list.current;
 	printf("%d\t%s\n", local_task->pid, local_task->name);
 	asm("sti;");
-	printf("TaskList size: %d\n", i);
+	printf("TaskList size: %d\n", i+2);
 }

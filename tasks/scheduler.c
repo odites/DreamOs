@@ -47,7 +47,6 @@ void schedule(unsigned int *stack){
 		next_task = dequeue_task();
 		dbg_bochs_print(next_task->name);						
 		dbg_bochs_print(cur_task->name);
-		//next_task = cur_task; // to be replaced
 		while(next_task->status!= READY && next_task->status != NEW){
 			dbg_bochs_print("Not READY or NEW");
 			enqueue_task(next_task->pid, next_task);
@@ -70,8 +69,8 @@ void preSchedule(){
 void idle()
 {	
 	dbg_bochs_print("idle\n");
-    while(TRUE){
-		dbg_bochs_print("idle\n");
+    while(1){
+		dbg_bochs_print("ie\n");
 	}
 }
 
